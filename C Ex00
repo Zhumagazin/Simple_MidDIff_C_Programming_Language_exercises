@@ -1,0 +1,18 @@
+#include <stdio.h>
+// function will printf("detonation in... %d secondes.\n", seconds_left);
+void detonation_in(int seconds_left);
+
+int main() {
+  int timer = 10;
+  
+
+  while (timer >= 1) {
+      detonation_in(timer);
+    timer--;
+  }
+  return 0;
+}
+
+void detonation_in(int seconds_left) {
+  printf("detonation in... %d seconds.\n", seconds_left);
+}
