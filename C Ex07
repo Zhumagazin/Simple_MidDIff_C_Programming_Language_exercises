@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+char* reverse_string(char* param_1) {
+    int length = 0;
+    char* beggining = param_1;
+    char* ending = param_1;
+    char temp;
+
+while (*ending != '\0') {
+    length++;
+    ending++;
+}
+ending--;
+
+for (int i = 0; i < length/2; i++) {
+    temp = *beggining;
+    *beggining = *ending;
+    *ending = temp;
+    beggining++;
+    ending--;
+}
+return param_1;
+}
