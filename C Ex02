@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+
+void my_putchar(char c) {
+    putchar(c);
+}
+
+
+void my_print_alphabet() {
+    for (char c = 'a'; c <= 'z'; c++) {
+        my_putchar(c);
+    }
+    my_putchar('\n');
+}
