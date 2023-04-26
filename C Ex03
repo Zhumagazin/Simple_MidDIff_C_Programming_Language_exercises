@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+
+void my_putchar(char c) {
+    putchar(c);
+}
+
+
+void my_print_reverse_alphabet() {
+    char x = 'z';
+    while (x >= 'a') {
+        my_putchar(x);
+        --x;
+    }
+    my_putchar('\n');
+}
