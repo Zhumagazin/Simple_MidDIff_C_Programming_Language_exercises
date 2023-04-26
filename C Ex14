@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int* my_range(int min, int max) {
+    if (min >= max) {
+        return NULL;
+    }
+
+    int size = max - min;
+    int* arr = (int*)malloc(size * sizeof(int));
+
+    for (int i = 0; i < size; i++) {
+        arr[i] = min + i;
+    }
+
+    return arr;
+}
+
+void print_array(int* arr, int size) {
+    for (int i = 0; i < size; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+}
