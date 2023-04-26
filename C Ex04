@@ -1,0 +1,5 @@
+#include <stdio.h>
+
+void my_string_formatting(char* name, char* surname, int age) {
+    printf("Hello, my name is %s %s, I'm %d.\n", name, surname, age);
+}
