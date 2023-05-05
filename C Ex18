@@ -1,0 +1,43 @@
+#include <stdlib.h>
+#include <string.h>
+//#include <cstddef>
+
+#ifndef STRUCT_STRING_ARRAY
+#define STRUCT_STRING_ARRAY
+typedef struct s_string_array
+{
+    int size;
+    char** array;
+} string_array;
+#endif
+
+char* my_join(string_array* param_1, char* param_2)
+{
+    
+    if (param_1->size == 0) {
+        //char* result = malloc(sizeof(char));
+        //result[0] = '\0';
+        return NULL;
+    }
+
+    
+    int total_len = 0;
+    for (int i = 0; i < param_1->size; i++) {
+        total_len += strlen(param_1->array[i]);
+    }
+    total_len += strlen(param_2) * (param_1->size - 1) + 1;
+
+    
+    char* result = malloc(sizeof(char) * total_len);
+
+    
+    strcpy(result, param_1->array[0]);
+
+   
+    for (int i = 1; i < param_1->size; i++) {
+        strcat(result, param_2);
+        strcat(result, param_1->array[i]);
+    }
+
+    return result;
+}
